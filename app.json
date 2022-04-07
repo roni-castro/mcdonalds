@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "mcdonald",
-    "slug": "mcdonald",
+    "name": "mcdonalds",
+    "slug": "mcdonalds",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -16,14 +16,14 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.ronicesarrc.mcdonald"
+      "bundleIdentifier": "com.ronicesarrc.mcdonalds"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#DA291C"
       },
-      "package": "com.ronicesarrc.mcdonald"
+      "package": "com.ronicesarrc.mcdonalds"
     },
     "web": {
       "favicon": "./assets/favicon.png"
