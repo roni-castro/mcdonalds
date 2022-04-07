@@ -17,13 +17,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ronicesarrc.mcdonald"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#DA291C"
-      }
+      },
+      "package": "com.ronicesarrc.mcdonald"
     },
     "web": {
       "favicon": "./assets/favicon.png"
