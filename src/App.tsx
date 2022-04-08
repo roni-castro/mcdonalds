@@ -1,18 +1,14 @@
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
 import { registerRootComponent } from 'expo';
-import { StatusBar } from 'expo-status-bar';
-import { useState } from 'react';
-import { View } from 'react-native';
-import styled, { ThemeProvider } from 'styled-components/native';
 import AppLoading from 'expo-app-loading';
+import { useState } from 'react';
+import { ThemeProvider } from 'styled-components/native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { StatusBar } from 'react-native';
 import useFonts from './hooks/useFonts';
+import HomeStack from './navigation/home';
 import theme from './theme';
-
-const Text = styled.Text({
-  color: theme.colors.primaryDefault,
-  fontFamily: theme.fontFamily.interRegular,
-  fontSize: theme.fontSizes.titleXLarge,
-  lineHeight: theme.lineHeights.titleXLarge,
-});
 
 function App() {
   const [IsReady, SetIsReady] = useState(false);
@@ -34,13 +30,14 @@ function App() {
     );
   }
   return (
-    <ThemeProvider theme={theme}>
-      <View>
-        <Text>Open up App.tsx to start working on your app!</Text>
-        {/* eslint-disable-next-line react/style-prop-object */}
-        <StatusBar style='auto' />
-      </View>
-    </ThemeProvider>
+    <SafeAreaProvider>
+      <ThemeProvider theme={theme}>
+        <NavigationContainer>
+          <StatusBar barStyle='dark-content' />
+          <HomeStack />
+        </NavigationContainer>
+      </ThemeProvider>
+    </SafeAreaProvider>
   );
 }
 
