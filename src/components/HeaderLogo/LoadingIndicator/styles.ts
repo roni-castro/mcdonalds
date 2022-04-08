@@ -2,7 +2,7 @@ import { ActivityIndicator } from 'react-native';
 import styled from 'styled-components/native';
 
 export const LoadingIndicatorStyled = styled(ActivityIndicator).attrs(({ color, size, theme }) => ({
-  color: color ?? theme.colors.secondaryDefault,
+  color: color ?? theme.colors.feedbackInfo,
   size: size ?? 'large',
 }))({});
 

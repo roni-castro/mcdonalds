@@ -7,7 +7,14 @@ const secondary = {
 } as const;
 
 const neutral = {
+  neutralWhite: '#FFF',
+  neutral15: '#DBE1DD',
   neutral100: '#000000',
 } as const;
 
-export default { colors: { ...primary, ...secondary, ...neutral } };
+const feedback = {
+  feedbackDanger: '#DE1212',
+  feedbackInfo: '#3395FF',
+} as const;
+
+export default { colors: { ...primary, ...secondary, ...neutral, ...feedback } };
