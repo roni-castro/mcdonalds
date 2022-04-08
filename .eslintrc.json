@@ -14,11 +14,11 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "plugins": ["react", "@typescript-eslint", "prettier", "react-hooks"],
+  "plugins": ["@typescript-eslint", "react", "prettier", "react-hooks"],
   "rules": {
     "import/no-unresolved": 0,
     "import/extensions": ["error", "never"],
-    "import/prefer-default-export": "warn",
+    "import/prefer-default-export": "off",
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
     "@typescript-eslint/no-shadow": ["error"],
@@ -28,7 +28,8 @@
         "extensions": [".ts", ".tsx"]
       }
     ],
-    "react/prop-types": 0,
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
     "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
     "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
     "react/jsx-uses-react": "off",
