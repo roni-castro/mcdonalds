@@ -3,6 +3,11 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import HeaderLogo from '../../components/HeaderLogo';
 import HomeScreen from '../../screens/Home';
 
+export type RootStackParamList = {
+  Home: undefined;
+  Screen2: undefined;
+};
+
 const Stack = createStackNavigator();
 
 export default function HomeStack() {

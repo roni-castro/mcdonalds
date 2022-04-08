@@ -1,6 +1,7 @@
 import { Button, View } from 'react-native';
 import styled from 'styled-components/native';
 import theme from '../../theme';
+import { HomeProps } from './interface';
 
 const Text = styled.Text({
   color: theme.colors.primaryDefault,
@@ -9,7 +10,7 @@ const Text = styled.Text({
   lineHeight: theme.lineHeights.titleXLarge,
 });
 
-export default function HomeScreen({ navigation }) {
+export default function HomeScreen({ navigation }: HomeProps) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Home Screen</Text>
