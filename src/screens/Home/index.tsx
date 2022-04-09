@@ -1,54 +1,60 @@
 import { Fragment, useEffect } from 'react';
-import { FlatList, ScrollView, View } from 'react-native';
-import styled from 'styled-components/native';
 import ErrorPlaceholder from '../../components/ErrorPlaceholder';
 import LoadingIndicator from '../../components/HeaderLogo/LoadingIndicator';
 import { useAsync } from '../../hooks/useAsync';
 import { getMenu } from '../../services/menu';
 import { ItemData, MenuResponse } from '../../services/menu/interface';
-import theme from '../../theme';
-
-const Text = styled.Text({
-  color: theme.colors.primaryDefault,
-  fontFamily: theme.fontFamily.interRegular,
-  fontSize: theme.fontSizes.titleXLarge,
-  lineHeight: theme.lineHeights.titleXLarge,
-});
+import {
+  ItemSeparator,
+  Title,
+  FoodCard,
+  FoodName,
+  FoodImage,
+  VerticalFlatlist,
+  HorizontalFlatlist,
+} from './styles';
 
 export default function HomeScreen() {
-  const { data, isError, isLoading, run } = useAsync<MenuResponse>();
+  const { data, isError, isLoading, isRefreshing, run } = useAsync<MenuResponse>();
 
   useEffect(() => {
     run(getMenu());
   }, [run]);
 
-  if (isLoading || !data) {
-    return <LoadingIndicator.Full />;
-  }
-
   if (isError) {
     return <ErrorPlaceholder onPressReload={() => run(getMenu())} />;
   }
 
-  const renderItem = (item: ItemData) => (
-    <View>
-      <Text>{item.name}</Text>
-    </View>
+  if (isLoading || !data) {
+    return <LoadingIndicator.Full />;
+  }
+
+  const renderItemData = (item: ItemData) => (
+    <FoodCard>
+      <FoodImage source={{ uri: item.url }} />
+      <FoodName>{item.name}</FoodName>
+    </FoodCard>
   );
 
   return (
-    <ScrollView>
-      {data.menus.map(menu => (
-        <Fragment key={menu.name}>
-          <Text>{menu.name}</Text>
-          <FlatList
+    <VerticalFlatlist
+      onRefresh={() => run(getMenu())}
+      refreshing={isRefreshing}
+      data={data.menus}
+      keyExtractor={menuData => menuData.name}
+      renderItem={({ item: menuData }) => (
+        <>
+          <Title>{menuData.name}</Title>
+          <HorizontalFlatlist
             horizontal
-            data={menu.items}
-            renderItem={({ item }) => renderItem(item)}
+            showsHorizontalScrollIndicator={false}
+            data={menuData.items}
             keyExtractor={item => item.name}
+            renderItem={({ item }) => renderItemData(item)}
+            ItemSeparatorComponent={ItemSeparator}
           />
-        </Fragment>
-      ))}
-    </ScrollView>
+        </>
+      )}
+    />
   );
 }
