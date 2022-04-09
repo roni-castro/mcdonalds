@@ -25,7 +25,7 @@ function useSafeDispatch<Action>(dispatch: React.Dispatch<Action>) {
 function asyncReducer<DataType>(state: AsyncState<DataType>, action: AsyncAction<DataType>) {
   switch (action.type) {
     case 'pending': {
-      return { status: 'pending' as const, data: null, error: null };
+      return { status: 'pending' as const, data: state.data, error: state.error };
     }
     case 'resolved': {
       return { status: 'resolved' as const, data: action.data, error: null };
@@ -74,7 +74,8 @@ function useAsync<DataType>(initialState?: AsyncState<DataType>): UseAsyncReturn
     data,
     run,
     isIdle: status === 'idle',
-    isLoading: status === 'pending',
+    isLoading: status === 'pending' && !data,
+    isRefreshing: status === 'pending' && !!data,
     isLoadingOrIdle: status === 'pending' || status === 'idle',
     isSuccess: status === 'resolved',
     isError: status === 'rejected',

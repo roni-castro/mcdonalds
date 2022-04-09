@@ -6,8 +6,8 @@ export type AsyncAction<DataType> =
 export type AsyncState<DataType> =
   | {
       status: 'idle' | 'pending';
-      data?: null;
-      error?: null;
+      data?: DataType | null;
+      error?: Error | null;
     }
   | {
       status: 'resolved';
@@ -27,6 +27,7 @@ export interface UseAsyncReturn<DataType> {
   run: (promise: Promise<DataType>) => void;
   isIdle: boolean;
   isLoading: boolean;
+  isRefreshing: boolean;
   isLoadingOrIdle: boolean;
   isSuccess: boolean;
   isError: boolean;
