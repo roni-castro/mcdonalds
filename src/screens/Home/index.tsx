@@ -1,6 +1,6 @@
 import { Fragment, useEffect } from 'react';
 import ErrorPlaceholder from '../../components/ErrorPlaceholder';
-import LoadingIndicator from '../../components/HeaderLogo/LoadingIndicator';
+import LoadingIndicator from '../../components/LoadingIndicator';
 import { useAsync } from '../../hooks/useAsync';
 import { getMenu } from '../../services/menu';
 import { ItemData, MenuResponse } from '../../services/menu/interface';
