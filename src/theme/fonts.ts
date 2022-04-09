@@ -6,13 +6,13 @@ export const fontWeight = {
 } as const;
 
 export const fontFamily = {
-  interLight: 'Inter_300Light',
-  interRegular: 'Inter_400Regular',
-  interBold: 'Inter_700Bold',
-  interMedium: 'Inter_500Medium',
+  InterLight: 'Inter_300Light',
+  InterRegular: 'Inter_400Regular',
+  InterBold: 'Inter_700Bold',
+  InterMedium: 'Inter_500Medium',
 } as const;
 
-export const fontSizes = {
+export const fontSize = {
   titleXLarge: 36,
   titleLarge: 32,
   titleMedium: 28,
@@ -25,7 +25,7 @@ export const fontSizes = {
   paragraphXSmall: 12,
 } as const;
 
-export const lineHeights = {
+export const lineHeight = {
   titleXLarge: 36,
   titleLarge: 32,
   titleMedium: 28,
@@ -40,7 +40,7 @@ export const lineHeights = {
 
 export default {
   fontWeight,
-  fontSizes,
+  fontSize,
   fontFamily,
-  lineHeights,
+  lineHeight,
 };

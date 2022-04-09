@@ -1,19 +1,21 @@
-const spacingSizes = {
-  spacing0px: '0px',
-  spacing4px: '4px',
-  spacing8px: '8px',
-  spacing12px: '12px',
-  spacing16px: '16px',
-  spacing20px: '20px',
-  spacing24px: '24px',
-  spacing32px: '32px',
-  spacing40px: '40px',
-  spacing48px: '48px',
-  spacing56px: '56px',
-  spacing64px: '64px',
-  spacing80px: '80px',
+const spacingSize = {
+  spacing0: 0,
+  spacing4: 4,
+  spacing8: 8,
+  spacing12: 12,
+  spacing16: 16,
+  spacing20: 20,
+  spacing24: 24,
+  spacing28: 28,
+  spacing32: 32,
+  spacing36: 36,
+  spacing40: 40,
+  spacing48: 48,
+  spacing56: 56,
+  spacing64: 64,
+  spacing80: 80,
 } as const;
 
 export default {
-  spacingSizes,
-};
+  ...spacingSize,
+} as const;

@@ -5,31 +5,31 @@ export const Container = styled.View(({ theme }) => ({
   flex: 1,
   alignItems: 'center',
   justifyContent: 'center',
-  backgroundColor: theme.colors.neutral15,
+  backgroundColor: theme.color.neutral15,
 }));
 
 export const ErrorImage = styled.Image.attrs(() => ({
   source: errorOutlineIcon,
 }))(({ theme }) => ({
-  marginBottom: theme.spacingSizes.spacing12px,
+  marginBottom: theme.spacingSize.spacing12,
 }));
 
 export const Text = styled.Text(({ theme }) => ({
-  fontSize: theme.fontSizes.paragraphMedium,
-  fontFamily: theme.fontFamily.interMedium,
-  color: theme.colors.neutral100,
+  fontSize: theme.fontSize.paragraphMedium,
+  fontFamily: theme.fontFamily.InterMedium,
+  color: theme.color.neutral100,
   textAlign: 'center',
-  paddingBottom: theme.spacingSizes.spacing12px,
+  paddingBottom: theme.spacingSize.spacing12,
 }));
 
 export const ReloadButton = styled.TouchableOpacity(({ theme }) => ({
-  backgroundColor: theme.colors.feedbackInfo,
+  backgroundColor: theme.color.feedbackInfo,
   borderRadius: 4,
-  padding: theme.spacingSizes.spacing8px,
+  padding: theme.spacingSize.spacing8,
 }));
 
 export const ReloadButtonText = styled.Text(({ theme }) => ({
-  fontSize: theme.fontSizes.paragraphSmall,
-  fontFamily: theme.fontFamily.interMedium,
-  color: theme.colors.neutralWhite,
+  fontSize: theme.fontSize.paragraphSmall,
+  fontFamily: theme.fontFamily.InterMedium,
+  color: theme.color.neutralWhite,
 }));
