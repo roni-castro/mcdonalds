@@ -11,7 +11,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "eslint": "eslint .",
+    "lint": "eslint .",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|tsx|json)\""
   },
   "dependencies": {
