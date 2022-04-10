@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
 export const ModalBottomBoxWrapper = styled.View(({ theme }) => ({
-  paddingTop: theme.spacingSize.spacing48,
+  paddingTop: theme.spacingSize.spacing32,
   backgroundColor: theme.color.neutralWhite,
   borderTopLeftRadius: 30,
   borderTopRightRadius: 30,

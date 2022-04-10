@@ -39,12 +39,11 @@ export const Title = styled(Typography).attrs({
   paddingBottom: theme.spacingSize.spacing20,
 }));
 
-export const FoodCard = styled.View.attrs({
+export const FoodCard = styled.TouchableOpacity.attrs({
   alignItems: 'center',
   justifyContent: 'center',
 })(({ theme }) => ({
   width: 160,
-  height: 160,
   padding: theme.spacingSize.spacing20,
   borderWidth: 1,
   borderRadius: 5,
