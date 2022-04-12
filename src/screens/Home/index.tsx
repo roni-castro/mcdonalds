@@ -5,7 +5,7 @@ import LoadingIndicator from '../../components/LoadingIndicator';
 import FoodDetail from './components/FoodDetail';
 import { useAsync } from '../../hooks/useAsync';
 import { getMenu } from '../../services/menu';
-import { ItemData, MenuResponse } from '../../services/menu/interface';
+import { ItemData, MenuData, MenuResponse } from '../../services/menu/interface';
 import {
   ItemSeparator,
   Title,
@@ -40,11 +40,25 @@ export default function HomeScreen() {
     toogleModal();
   };
 
-  const renderItemData = (item: ItemData) => (
+  const renderItemData = ({ item }: { item: ItemData }) => (
     <FoodCard onPress={() => handleItemPress(item)}>
       <FoodImage source={{ uri: item.url }} />
       <FoodName>{item.name}</FoodName>
     </FoodCard>
+  );
+
+  const renderItemMenuData = ({ item: menuData }: { item: MenuData }) => (
+    <>
+      <Title>{menuData.name}</Title>
+      <HorizontalFlatlist
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        data={menuData.items}
+        keyExtractor={item => item.name}
+        renderItem={renderItemData}
+        ItemSeparatorComponent={ItemSeparator}
+      />
+    </>
   );
 
   return (
@@ -54,19 +68,7 @@ export default function HomeScreen() {
         refreshing={isRefreshing}
         data={data.menus}
         keyExtractor={menuData => menuData.name}
-        renderItem={({ item: menuData }) => (
-          <>
-            <Title>{menuData.name}</Title>
-            <HorizontalFlatlist
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              data={menuData.items}
-              keyExtractor={item => item.name}
-              renderItem={({ item }) => renderItemData(item)}
-              ItemSeparatorComponent={ItemSeparator}
-            />
-          </>
-        )}
+        renderItem={renderItemMenuData}
       />
       {selectedItem && (
         <ModalBottom isVisible={isModalVisible} onCloseOrDismissModal={toogleModal}>
