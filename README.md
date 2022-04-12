@@ -140,6 +140,9 @@ Here is some of the pre-defined tokens, based on some Figma values
 
 [Link](https://expo.dev/@ronicesarrc/mcdonalds?serviceType=classic&distribution=expo-go)
 
+# Demo Video
+
+[Link](https://drive.google.com/file/d/1eIOpobZgQIC19F_ZSC9sZLUdWC3iOneK/view?ths=true)
 
 # Screenshots:
 <img width=300 alt="splash" src="https://user-images.githubusercontent.com/24610813/162873212-136a88cc-0c79-4ab8-80d3-1fe5188eac63.png"/> <img width=300 alt="loading" src="https://user-images.githubusercontent.com/24610813/162873206-4f73929c-05c9-4a5e-a1bd-68ed24f3ae52.png"/> <img width=300 alt="error_placeholder" src="https://user-images.githubusercontent.com/24610813/162873191-72ac77c0-cf79-4158-b70f-008b84f74b6b.png"/> <img width=300 alt="home" src="https://user-images.githubusercontent.com/24610813/162873201-7fcafa0c-26c0-4505-9b4c-950e2f88ab61.png"/> <img width=300 alt="menu_modal" src="https://user-images.githubusercontent.com/24610813/162873208-91f96a95-65e5-4b9f-88d3-b6d5283c982c.png"/> 
