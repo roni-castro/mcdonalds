@@ -37,6 +37,56 @@ expo publish
 ```
 [Docs](https://docs.expo.dev/workflow/publishing/#how-to-publish)
 
+# Folder and File structure:
+
+src
+    └── components
+        └── ComponentName
+            └── index.tsx
+            └── styles.ts
+            └── interface.ts
+    └── config
+        └── someConfig
+            └── index.ts
+    └── hooks
+        └── useNameOfTheHook
+            └── index.ts
+            └── interface.ts
+    └── navigation
+        └── featureNavigation
+            └── index.tsx
+    └── screens
+        └── FeatureScreen
+            └── index.tsx
+            └── styles.ts
+            └── interface.ts
+            └── components
+                └── ComponentName
+                    └── index.tsx
+                    └── styles.ts
+                    └── interface.ts
+    └── services
+        └── featureServiceName
+            └── index.ts
+            └── interface.ts
+    └── theme
+        └── token1.ts
+        └── token2.ts
+        └── index.ts
+    └── utils
+        └── nameOfTheUtils.ts
+
+Obs: All screen and components should start with capital letter.
+
+## Folder meanings:
+> components: All reusable components.
+> config: The project configuration goes here, like api client.
+> hooks: All reusable hooks.
+> navigation: Any kind of navigation, stack, tabs... associated with react-navigation. Separed by feature.
+> screens: All the screens of the project. It can have a component folder when the component is not reusable. The same could be done for the hooks
+> services: All the api service functions and api interfaces.
+> theme: all the theme tokens and types
+> utils: shared functions.
 
 ## Design System
 
