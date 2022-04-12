@@ -7,11 +7,13 @@
 Check the minimum Node version [here](.nvmrc)
 
 2. Install [expo command line tools](https://docs.expo.dev/get-started/installation/#installing-expo-cli)
+
 ```sh
 npm install --global expo-cli
 ```
 
 3. Install the dependencies of the project:
+
 ```sh
 expo install
 ```
@@ -19,6 +21,7 @@ expo install
 # Run the project
 
 1. Run the command to start expo:
+
 ```sh
 expo start
 ```
@@ -32,13 +35,16 @@ expo start
 ```
 
 # Publish the Android app (Requires authentication)
+
 ```sh
 expo publish
 ```
+
 [Docs](https://docs.expo.dev/workflow/publishing/#how-to-publish)
 
 # Folder and File structure:
 
+```
 src
     └── components
         └── ComponentName
@@ -75,10 +81,12 @@ src
         └── index.ts
     └── utils
         └── nameOfTheUtils.ts
+```
 
-Obs: All screen and components should start with capital letter.
+Obs: All screen and components should start with a capital letter.
 
 ## Folder meanings:
+
 > components: All reusable components.
 > config: The project configuration goes here, like api client.
 > hooks: All reusable hooks.
@@ -124,11 +132,9 @@ Here is some of the pre-defined tokens, based on some Figma values
 | paragraphSmall   | 14px  |
 | paragraphXSmall  | 12px  |
 
-
 # Technical Design Template
 
 [Link to the docs](https://docs.google.com/document/d/1JeHL2JEzTgIE_jdd3DYpeA7xd22gQj4GKyTM6shIXWM/edit?usp=sharing)
-
 
 # Expo Release - Android
 
