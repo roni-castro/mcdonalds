@@ -87,14 +87,14 @@ Obs: All screen and components should start with a capital letter.
 
 ## Folder meanings:
 
-> components: All reusable components.
-> config: The project configuration goes here, like api client.
-> hooks: All reusable hooks.
-> navigation: Any kind of navigation, stack, tabs... associated with react-navigation. Separed by feature.
-> screens: All the screens of the project. It can have a component folder when the component is not reusable. The same could be done for the hooks
-> services: All the api service functions and api interfaces.
-> theme: all the theme tokens and types
-> utils: shared functions.
+**components**: All reusable components.\
+**config**: The project configuration goes here, like api client.\
+**hooks**: All reusable hooks.\
+**navigation**: Any kind of navigation, stack, tabs... associated with react-navigation. Separed by feature.\
+**screens**: All the screens of the project. It can have a component folder when the component is not reusable. The same could be done for the hooks\
+**services**: All the api service functions and api interfaces.\
+**theme**: all the theme tokens and types\
+**utils**: shared functions.
 
 ## Design System
 
