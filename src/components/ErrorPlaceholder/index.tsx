@@ -1,8 +1,5 @@
 import React from 'react';
 
-/**
- * The internal dependencies.
- */
 import { Text, ErrorImage, ReloadButton, ReloadButtonText, Container } from './styles';
 import { ErrorPlaceholderProps } from './interface';
 
